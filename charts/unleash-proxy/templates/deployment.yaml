@@ -34,10 +34,12 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: UNLEASH_PROXY_CLIENT_KEYS
-              value: {{ .Values.unleashProxy.clientKey }}
-            - name: UNLEASH_URL
-              value: {{ .Values.unleashProxy.url }}
+            {{- range $key, $value := .Values.environments }}
+            {{- if ne $key "UNLEASH_API_TOKEN"}}
+            - name: {{ $key }}
+              value: "{{ $value }}"
+            {{- end }}
+            {{- end }}
             - name: UNLEASH_API_TOKEN
               valueFrom:
                 secretKeyRef:

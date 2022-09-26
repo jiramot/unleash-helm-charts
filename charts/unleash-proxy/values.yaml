@@ -80,10 +80,10 @@ tolerations: []
 
 affinity: {}
 
-unleashProxy:
-  clientKey: "some-secret"
-  url: "https://app.unleash-hosted.com/demo/api/"
-  apiToken: ""
+environments:
+  UNLEASH_PROXY_CLIENT_KEYS: "some-secret"
+  UNLEASH_URL: "https://app.unleash-hosted.com/demo/api/"
+  UNLEASH_API_TOKEN: ""
 
 secret:
   existingSecret: ""

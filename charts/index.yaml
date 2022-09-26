@@ -3,7 +3,7 @@ entries:
   unleash:
   - apiVersion: v2
     appVersion: 4.12.6
-    created: "2022-09-26T14:56:47.543353+07:00"
+    created: "2022-09-27T09:05:49.270314+07:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -24,6 +24,20 @@ entries:
     - https://github.com/Unleash/helm-charts
     type: application
     urls:
-    - https://github.com/jiramot/unleash-helm-charts/raw/helm-charts/charts/unleash-2.7.0.tgz
+    - unleash-2.7.0.tgz
     version: 2.7.0
-generated: "2022-09-26T14:56:47.539926+07:00"
+  unleash-proxy:
+  - apiVersion: v2
+    appVersion: 0.10.4
+    created: "2022-09-27T09:05:49.270706+07:00"
+    description: A Helm chart for unleash-proxy
+    digest: 1b33c32ef7b178ce9d4f7cdd0b65a86272a49d9c26f8cf5a48535b9c0f5abeca
+    maintainers:
+    - email: jiramot@gmail.com
+      name: jiramot
+    name: unleash-proxy
+    type: application
+    urls:
+    - unleash-proxy-2.7.0.tgz
+    version: 2.7.0
+generated: "2022-09-27T09:05:49.266846+07:00"
