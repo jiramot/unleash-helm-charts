@@ -8,6 +8,13 @@ helm install unleash-proxy \
     --set environments.UNLEASH_API_TOKEN="56907a2fa53c1d16101d509a10b78e36190b0f918d9f122d" \
     .
 ```
+```
+helm repo add my-unleash https://raw.githubusercontent.com/jiramot/unleash-helm-charts/helm-charts/charts
+helm install unleash-proxy my-unleash/unleash-proxy \
+    --set environments.UNLEASH_PROXY_CLIENT_KEYS=some-secret \
+    --set environments.UNLEASH_URL=https://app.unleash-hosted.com/demo/api/ \
+    --set environments.UNLEASH_API_TOKEN="56907a2fa53c1d16101d509a10b78e36190b0f918d9f122d"
+```
 
 ## Test
 ```
